@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let tab=[]
+		let tab0=[]
+		let tab1=[]
+		let tab2=[]
+		let tab3=[]
+		let n=20;
+		let a,b;
+		for(i=1; i<n; i++){
+			tab.push(i)
+		}
+			for(let i of tab){
+				a=tab[1]
+				b=tab[2]
+				if(i%a==0 && i%b!==0 ){
+				tab0.push(i)
+				}else if(i%b==0 && i%a!==0 ){
+				 tab1.push(i)
+			    }else if(i%a==0 && i%b==0 ){
+				 tab2.push(i)
+			    }else{
+				  tab3.push(i)
+				}
+			}
+	
+
+		
+
+
+
+		
+		console.log(`enteval${tab}`)
+		console.log(`Miltip a, men ki pa miltip b:${tab0}  total:${tab0.length}`)
+		console.log(`Miltip b, men ki pa miltip a :${tab1}  total:${tab1.length}`)
+		console.log(`Miltip a ak b:${tab2}  total:${tab2.length}`)
+		console.log(`Ki pa miltip ni a ni b:${tab3}  total:${tab3.length}`)
+	</script>
+</body>
+</html>

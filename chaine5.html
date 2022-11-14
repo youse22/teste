@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let c="5 45 123 12"
+		c=c.split(" ")
+		let tab=[]
+		let prod=1;
+		let sum=0;
+		for(let i of c){
+			if(i.length>1){
+				for(let e of i){
+					sum+=parseInt(e)
+				}
+				tab.push(sum)
+			}else{
+				tab.push(parseInt(i))
+			}
+			
+		}
+		for(let i=0; i<tab.length; i++){
+			prod*=tab[i]
+		}
+		console.log(prod)
+	</script>
+</body>
+</html>
