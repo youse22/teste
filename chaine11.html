@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function dif(n1,n2){
+			return n1-n2
+		}
+		let tab=[100,32,15,6,7,]
+		tab.sort(dif)
+		let min,max;
+		console.log (tab)
+		for(let i=0; i<tab.length; i++){
+			if(tab[i]<tab.at(-1)){
+				max=tab.at(-1)
+			}else{
+				min=tab[0]
+			}
+		}
+		console.log(`pi gran an se:${max}`)
+		console.log(`pi piti a se ${min}`)
+
+		
+	</script>
+</body>
+</html>
