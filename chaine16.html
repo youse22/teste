@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+    let alph="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    function decrypted(mo){
+      mo='<1T >7H >3C <5Y >13J <2C <5W >4A'
+      mo=mo.split(' ')
+      let m='';
+      let b;
+      for(i of mo){
+        for(e in i){
+          if(i[0]=='<'){
+            b=alph.indexOf(i[2])-parseInt(i[1])
+          }else{
+            b=alph.indexOf(i[2])+parseInt(i[1])  
+          }
+        }
+        m+=alph[b]
+      }return m
+    }
+    let mot=prompt("antre yon mo ankripte:")
+    console.log(decrypted(mot))
+	</script>
+</body>
+</html>
