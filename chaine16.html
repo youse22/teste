@@ -5,23 +5,31 @@
 </head>
 <body>
 	<script type="text/javascript">
-
-    let alph="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     function decrypted(mo){
-      mo='<1T >7H >3C <5Y >13J <2C <5W >4A'
+      let alph="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
       mo=mo.split(' ')
       let m='';
-      let b;
-      for(i of mo){
-        for(e in i){
-          if(i[0]=='<'){
-            b=alph.indexOf(i[2])-parseInt(i[1])
+  
+     for(i of mo){
+        if(i[0]=='<'){
+         if(i.length==4){
+            let idx = alph.indexOf(i[3]) - parseInt(i.slice(1,3))
+            m += alph[idx]
           }else{
-            b=alph.indexOf(i[2])+parseInt(i[1])  
+            let idx = alph.indexOf(i[2]) - parseInt(i[1])
+            m += alph[idx]
+          }
+        }else if(i[0]=='>'){
+          if(i.length==4){
+            let idx = alph.indexOf(i[3]) + parseInt(i.slice(1,3))
+            m += alph[idx]
+         }else{
+            let idx = alph.indexOf(i[2]) + parseInt(i[1])
+            m += alph[idx]
           }
         }
-        m+=alph[b]
-      }return m
+      } 
+      return m;
     }
     let mot=prompt("antre yon mo ankripte:")
     console.log(decrypted(mot))
